@@ -30,4 +30,4 @@ Find the **TextEncodeQwenImageEditAdvanced** node
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/d8cae86d-bc5e-42ee-a04f-abbe5380effd" />
 
-I also provide a workflow for those interested.
+I also provide [a workflow](https://github.com/BigStationW/ComfyUi-TextEncodeQwenImageEditAdvanced/blob/main/workflow/workflow_Qwen_Image_Edit.json) for those interested.

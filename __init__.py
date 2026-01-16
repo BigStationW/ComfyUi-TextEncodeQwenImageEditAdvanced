@@ -4,7 +4,7 @@ import comfy.utils
 from comfy_extras import nodes_custom_sampler
 from nodes import node_helpers
 
-class TextEncodeQwenImageEditAdvanced:
+class TextEncodeEditAdvanced:
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -59,9 +59,9 @@ class TextEncodeQwenImageEditAdvanced:
                     ref_latents.append(vae.encode(samples.movedim(1, -1)[:, :, :, :3]))
         
         tokens = clip.tokenize(
-            image_prompt + prompt, 
-            images=images_vl if not vl_disabled and len(images_vl) > 0 else None, 
-            llama_template=llama_template
+            image_prompt + prompt,
+            images=images_vl if not vl_disabled and len(images_vl) > 0 else None,
+            llama_template=llama_template if not vl_disabled else None  # Only use template when VL is enabled
         )
         conditioning = clip.encode_from_tokens_scheduled(tokens)
         
@@ -71,9 +71,9 @@ class TextEncodeQwenImageEditAdvanced:
         return (conditioning,)
 
 NODE_CLASS_MAPPINGS = {
-    "TextEncodeQwenImageEditAdvanced": TextEncodeQwenImageEditAdvanced,
+    "TextEncodeEditAdvanced": TextEncodeEditAdvanced,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "TextEncodeQwenImageEditAdvanced": "TextEncodeQwenImageEditAdvanced",
+    "TextEncodeEditAdvanced": "TextEncodeEditAdvanced",
 }

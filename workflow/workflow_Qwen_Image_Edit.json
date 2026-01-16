@@ -1,8 +1,8 @@
 {
   "id": "91f6bbe2-ed41-4fd6-bac7-71d5b5864ecb",
   "revision": 0,
-  "last_node_id": 106,
-  "last_link_id": 206,
+  "last_node_id": 108,
+  "last_link_id": 214,
   "nodes": [
     {
       "id": 75,
@@ -342,8 +342,8 @@
           "type": "CLIP",
           "slot_index": 0,
           "links": [
-            199,
-            203
+            207,
+            211
           ]
         }
       ],
@@ -396,8 +396,8 @@
           "links": [
             76,
             168,
-            200,
-            204
+            208,
+            212
           ]
         }
       ],
@@ -443,7 +443,7 @@
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 206
+          "link": 214
         }
       ],
       "outputs": [
@@ -685,7 +685,7 @@
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 202
+          "link": 210
         }
       ],
       "outputs": [
@@ -733,8 +733,8 @@
           "type": "IMAGE",
           "links": [
             178,
-            201,
-            205
+            209,
+            213
           ]
         }
       ],
@@ -763,130 +763,6 @@
       ]
     },
     {
-      "id": 105,
-      "type": "TextEncodeQwenImageEditAdvanced",
-      "pos": [
-        -79.86146545410156,
-        101.26612854003906
-      ],
-      "size": [
-        400,
-        271.1883850097656
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 199
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": 200
-        },
-        {
-          "name": "image1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 201
-        },
-        {
-          "name": "image2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "image3",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            202
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "TextEncodeQwenImageEditAdvanced"
-      },
-      "widgets_values": [
-        "",
-        0.5
-      ]
-    },
-    {
-      "id": 106,
-      "type": "TextEncodeQwenImageEditAdvanced",
-      "pos": [
-        -85.97272491455078,
-        434.9549865722656
-      ],
-      "size": [
-        400,
-        271.1883850097656
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 203
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": 204
-        },
-        {
-          "name": "image1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 205
-        },
-        {
-          "name": "image2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "image3",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            206
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "TextEncodeQwenImageEditAdvanced"
-      },
-      "widgets_values": [
-        "",
-        0.5
-      ]
-    },
-    {
       "id": 99,
       "type": "MarkdownNote",
       "pos": [
@@ -911,6 +787,134 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 108,
+      "type": "TextEncodeEditAdvanced",
+      "pos": [
+        -108.84627369620475,
+        407.4522675882585
+      ],
+      "size": [
+        423.3065674326049,
+        281.04360045654073
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 211
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 212
+        },
+        {
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 213
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            214
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "textencodeqwenimageeditadvanced",
+        "ver": "f8e8bdeceb22a7cd9b11e6d64b07b128e08ea564",
+        "Node name for S&R": "TextEncodeEditAdvanced"
+      },
+      "widgets_values": [
+        "",
+        0.5
+      ]
+    },
+    {
+      "id": 107,
+      "type": "TextEncodeEditAdvanced",
+      "pos": [
+        -109.10081663758177,
+        56.52232000419992
+      ],
+      "size": [
+        423.3065674326049,
+        281.04360045654073
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 207
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 208
+        },
+        {
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 209
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            210
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "textencodeqwenimageeditadvanced",
+        "ver": "f8e8bdeceb22a7cd9b11e6d64b07b128e08ea564",
+        "Node name for S&R": "TextEncodeEditAdvanced"
+      },
+      "widgets_values": [
+        "Replace the girl on the right with Hatsune Miku",
+        0.5
+      ]
     }
   ],
   "links": [
@@ -1019,64 +1023,64 @@
       "CONDITIONING"
     ],
     [
-      199,
+      207,
       38,
       0,
-      105,
+      107,
       0,
       "CLIP"
     ],
     [
-      200,
+      208,
       39,
       0,
-      105,
+      107,
       1,
       "VAE"
     ],
     [
-      201,
+      209,
       93,
       0,
-      105,
+      107,
       2,
       "IMAGE"
     ],
     [
-      202,
-      105,
+      210,
+      107,
       0,
       102,
       0,
       "CONDITIONING"
     ],
     [
-      203,
+      211,
       38,
       0,
-      106,
+      108,
       0,
       "CLIP"
     ],
     [
-      204,
+      212,
       39,
       0,
-      106,
+      108,
       1,
       "VAE"
     ],
     [
-      205,
+      213,
       93,
       0,
-      106,
+      108,
       2,
       "IMAGE"
     ],
     [
-      206,
-      106,
+      214,
+      108,
       0,
       101,
       0,
@@ -1087,19 +1091,20 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.47362440744769485,
+      "scale": 0.6303940863128822,
       "offset": [
-        1429.2011196606165,
-        277.80114229413357
+        901.509910284879,
+        395.6536880002282
       ]
     },
-    "frontendVersion": "1.17.5",
+    "frontendVersion": "1.36.14",
     "ue_links": [],
     "links_added_by_ue": [],
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
-    "VHS_KeepIntermediate": true
+    "VHS_KeepIntermediate": true,
+    "workflowRendererVersion": "LG"
   },
   "version": 0.4
 }

@@ -1,4 +1,4 @@
-# ComfyUi-TextEncodeQwenImageEditAdvanced
+# ComfyUi-TextEncodeEditAdvanced
 
 ## Intro
 Qwen Image Edit uses a Vision Language Model (VLM) to analyze your input images and automatically enhance your prompt with more detailed descriptions.
@@ -13,6 +13,8 @@ By adjusting this threshold, you may achieve:
 - Reduced zoom effect: Mitigate the tendency for Qwen Image Edit to zoom in on images
 
 https://github.com/user-attachments/assets/23dca6a6-6add-44b5-8777-9c206ea66f9f
+
+When going for vl_megapixels = 0, it has the same effect as stacking multiple ReferenceLatent nodes with each other.
 
 ## Installation
 

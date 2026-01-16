@@ -1,8 +1,8 @@
 {
   "id": "92112d97-bb64-4b44-86f2-ea5691ef8f6e",
   "revision": 0,
-  "last_node_id": 153,
-  "last_link_id": 284,
+  "last_node_id": 154,
+  "last_link_id": 289,
   "nodes": [
     {
       "id": 99,
@@ -395,7 +395,7 @@
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 276
+          "link": 289
         }
       ],
       "outputs": [
@@ -413,69 +413,6 @@
         "Node name for S&R": "BasicGuider"
       },
       "widgets_values": []
-    },
-    {
-      "id": 115,
-      "type": "ImageScaleToTotalPixelsX",
-      "pos": [
-        -304.38586324343805,
-        1262.4456528046699
-      ],
-      "size": [
-        294.68986108764636,
-        188.97893966918946
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 277
-        }
-      ],
-      "outputs": [
-        {
-          "name": "upscaled_image",
-          "type": "IMAGE",
-          "links": [
-            214,
-            216,
-            248,
-            275
-          ]
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [
-            205,
-            206
-          ]
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [
-            207,
-            208
-          ]
-        }
-      ],
-      "title": "Image 1",
-      "properties": {
-        "cnr_id": "scale-image-to-total-pixels-advanced",
-        "ver": "c88596fe43bf5d887a93f00ce6c29fd0f2fe63a9",
-        "Node name for S&R": "ImageScaleToTotalPixelsX",
-        "aux_id": "BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced"
-      },
-      "widgets_values": [
-        1,
-        16,
-        "crop",
-        "lanczos"
-      ]
     },
     {
       "id": 109,
@@ -643,7 +580,7 @@
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            283
+            285
           ]
         }
       ],
@@ -679,7 +616,7 @@
           "type": "VAE",
           "links": [
             184,
-            284
+            286
           ]
         }
       ],
@@ -704,71 +641,6 @@
       },
       "widgets_values": [
         "flux2-vae.safetensors"
-      ]
-    },
-    {
-      "id": 147,
-      "type": "TextEncodeEditAdvanced",
-      "pos": [
-        113.23574937183461,
-        754.9921310514372
-      ],
-      "size": [
-        423.3065674326049,
-        281.04360045654073
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 283
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": 284
-        },
-        {
-          "name": "image1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 275
-        },
-        {
-          "name": "image2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 279
-        },
-        {
-          "name": "image3",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            276
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "textencodeqwenimageeditadvanced",
-        "ver": "f8e8bdeceb22a7cd9b11e6d64b07b128e08ea564",
-        "Node name for S&R": "TextEncodeEditAdvanced",
-        "aux_id": "BigStationW/ComfyUi-TextEncodeEditAdvanced"
-      },
-      "widgets_values": [
-        "The two characters are playing poker",
-        0
       ]
     },
     {
@@ -905,7 +777,7 @@
           "type": "IMAGE",
           "links": [
             249,
-            279
+            288
           ]
         },
         {
@@ -1001,6 +873,133 @@
       ],
       "color": "#c09430",
       "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 115,
+      "type": "ImageScaleToTotalPixelsX",
+      "pos": [
+        -401.5619765196231,
+        1168.1277451646702
+      ],
+      "size": [
+        294.68986108764636,
+        188.97893966918946
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 277
+        }
+      ],
+      "outputs": [
+        {
+          "name": "upscaled_image",
+          "type": "IMAGE",
+          "links": [
+            214,
+            216,
+            248,
+            287
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            205,
+            206
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            207,
+            208
+          ]
+        }
+      ],
+      "title": "Image 1",
+      "properties": {
+        "cnr_id": "scale-image-to-total-pixels-advanced",
+        "ver": "c88596fe43bf5d887a93f00ce6c29fd0f2fe63a9",
+        "Node name for S&R": "ImageScaleToTotalPixelsX",
+        "aux_id": "BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced"
+      },
+      "widgets_values": [
+        1,
+        16,
+        "crop",
+        "lanczos"
+      ]
+    },
+    {
+      "id": 154,
+      "type": "TextEncodeEditAdvanced",
+      "pos": [
+        120.58518725455107,
+        725.5642636296474
+      ],
+      "size": [
+        425.3777035461426,
+        370.4864203308101
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 285
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 286
+        },
+        {
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 287
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 288
+        },
+        {
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            289
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "BigStationW/ComfyUi-TextEncodeEditAdvanced",
+        "ver": "1a1bf8cc032fea64affce2e2dbfbd479585481f8",
+        "Node name for S&R": "TextEncodeEditAdvanced"
+      },
+      "widgets_values": [
+        "The two characters are playing poker",
+        0
+      ]
     }
   ],
   "links": [
@@ -1173,22 +1172,6 @@
       "GUIDER"
     ],
     [
-      275,
-      115,
-      0,
-      147,
-      2,
-      "IMAGE"
-    ],
-    [
-      276,
-      147,
-      0,
-      139,
-      1,
-      "CONDITIONING"
-    ],
-    [
       277,
       148,
       0,
@@ -1205,38 +1188,54 @@
       "IMAGE"
     ],
     [
-      279,
-      133,
-      0,
-      147,
-      3,
-      "IMAGE"
-    ],
-    [
-      283,
+      285,
       150,
       0,
-      147,
+      154,
       0,
       "CLIP"
     ],
     [
-      284,
+      286,
       105,
       0,
-      147,
+      154,
       1,
       "VAE"
+    ],
+    [
+      287,
+      115,
+      0,
+      154,
+      2,
+      "IMAGE"
+    ],
+    [
+      288,
+      133,
+      0,
+      154,
+      3,
+      "IMAGE"
+    ],
+    [
+      289,
+      154,
+      0,
+      139,
+      1,
+      "CONDITIONING"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.38554328942953253,
+      "scale": 0.6830134553650726,
       "offset": [
-        2471.836908430586,
-        -675.5372620150639
+        976.6018258417594,
+        -246.00937870060187
       ]
     },
     "frontendVersion": "1.36.14",

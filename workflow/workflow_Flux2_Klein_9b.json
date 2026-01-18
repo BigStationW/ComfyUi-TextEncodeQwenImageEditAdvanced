@@ -1,8 +1,8 @@
 {
   "id": "92112d97-bb64-4b44-86f2-ea5691ef8f6e",
   "revision": 0,
-  "last_node_id": 156,
-  "last_link_id": 299,
+  "last_node_id": 161,
+  "last_link_id": 304,
   "nodes": [
     {
       "id": 99,
@@ -145,9 +145,9 @@
           "type": "IMAGE",
           "slot_index": 0,
           "links": [
-            209,
             210,
-            213
+            213,
+            303
           ]
         }
       ],
@@ -177,7 +177,7 @@
         698.4635620117188
       ],
       "flags": {},
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -273,7 +273,7 @@
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 211
+          "link": 304
         }
       ],
       "outputs": [],
@@ -355,7 +355,7 @@
         834.3829905373195
       ],
       "flags": {},
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -515,52 +515,6 @@
       ]
     },
     {
-      "id": 116,
-      "type": "AD_image-concat",
-      "pos": [
-        1018.1316554317442,
-        1344.0664645768632
-      ],
-      "size": [
-        270,
-        126
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image1",
-          "type": "IMAGE",
-          "link": 250
-        },
-        {
-          "name": "image2",
-          "type": "IMAGE",
-          "link": 209
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            211
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "ComfyUI-Addoor",
-        "ver": "d51659f66696e9a89c7f6adbf159c1f074742b7a",
-        "Node name for S&R": "AD_image-concat"
-      },
-      "widgets_values": [
-        "horizontal",
-        true,
-        "lanczos"
-      ]
-    },
-    {
       "id": 150,
       "type": "CLIPLoader",
       "pos": [
@@ -709,8 +663,8 @@
           "type": "IMAGE",
           "links": [
             214,
-            248,
-            297
+            297,
+            300
           ]
         },
         {
@@ -810,8 +764,8 @@
           "name": "image",
           "type": "IMAGE",
           "links": [
-            249,
-            298
+            298,
+            301
           ]
         },
         {
@@ -841,52 +795,6 @@
       ]
     },
     {
-      "id": 137,
-      "type": "AD_image-concat",
-      "pos": [
-        198.16755649702165,
-        1424.7252922455064
-      ],
-      "size": [
-        270,
-        126
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image1",
-          "type": "IMAGE",
-          "link": 248
-        },
-        {
-          "name": "image2",
-          "type": "IMAGE",
-          "link": 249
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            250
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "ComfyUI-Addoor",
-        "ver": "d51659f66696e9a89c7f6adbf159c1f074742b7a",
-        "Node name for S&R": "AD_image-concat"
-      },
-      "widgets_values": [
-        "vertical",
-        true,
-        "lanczos"
-      ]
-    },
-    {
       "id": 156,
       "type": "TextEncodeEditAdvanced",
       "pos": [
@@ -898,7 +806,7 @@
         302.726494183349
       ],
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -974,6 +882,140 @@
       ],
       "color": "#c09430",
       "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 159,
+      "type": "AD_image-concat-advanced",
+      "pos": [
+        269.5898109603248,
+        1406.718822735881
+      ],
+      "size": [
+        335.3365234375,
+        210
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 300
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 301
+        },
+        {
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            302
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "BigStationW/Comfyui-AD-Image-Concatenation-Advanced",
+        "ver": "a5c09c8a893032dc4a3a3d5ff32fbd195883fbda",
+        "Node name for S&R": "AD_image-concat-advanced"
+      },
+      "widgets_values": [
+        "vertical",
+        true,
+        "lanczos",
+        true
+      ]
+    },
+    {
+      "id": 161,
+      "type": "AD_image-concat-advanced",
+      "pos": [
+        903.8231164363976,
+        1421.7383941006276
+      ],
+      "size": [
+        335.3365234375,
+        210
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 302
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 303
+        },
+        {
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            304
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "BigStationW/Comfyui-AD-Image-Concatenation-Advanced",
+        "ver": "a5c09c8a893032dc4a3a3d5ff32fbd195883fbda",
+        "Node name for S&R": "AD_image-concat-advanced"
+      },
+      "widgets_values": [
+        "horizontal",
+        true,
+        "lanczos",
+        false
+      ]
     }
   ],
   "links": [
@@ -1058,26 +1100,10 @@
       "INT"
     ],
     [
-      209,
-      101,
-      0,
-      116,
-      1,
-      "IMAGE"
-    ],
-    [
       210,
       101,
       0,
       117,
-      0,
-      "IMAGE"
-    ],
-    [
-      211,
-      116,
-      0,
-      118,
       0,
       "IMAGE"
     ],
@@ -1094,30 +1120,6 @@
       115,
       0,
       119,
-      0,
-      "IMAGE"
-    ],
-    [
-      248,
-      115,
-      0,
-      137,
-      0,
-      "IMAGE"
-    ],
-    [
-      249,
-      133,
-      0,
-      137,
-      1,
-      "IMAGE"
-    ],
-    [
-      250,
-      137,
-      0,
-      116,
       0,
       "IMAGE"
     ],
@@ -1192,16 +1194,56 @@
       139,
       1,
       "CONDITIONING"
+    ],
+    [
+      300,
+      115,
+      0,
+      159,
+      0,
+      "IMAGE"
+    ],
+    [
+      301,
+      133,
+      0,
+      159,
+      1,
+      "IMAGE"
+    ],
+    [
+      302,
+      159,
+      0,
+      161,
+      0,
+      "IMAGE"
+    ],
+    [
+      303,
+      101,
+      0,
+      161,
+      1,
+      "IMAGE"
+    ],
+    [
+      304,
+      161,
+      0,
+      118,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3504938994813929,
+      "scale": 0.31863081771035767,
       "offset": [
-        1402.784456478424,
-        73.69460037873525
+        1692.9335637244894,
+        33.2167883242924
       ]
     },
     "frontendVersion": "1.36.14",

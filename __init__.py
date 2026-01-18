@@ -19,6 +19,10 @@ class TextEncodeEditAdvanced:
                     "display": "number",
                     "tooltip": "Target megapixels for Vision-Language model. Set to 0 to disable VL image feeding. Recommended: 0.2-1.0 MP. Qwen2.5-VL trained range: 0.2-1.0 MP"
                 }),
+                "max_images_allowed": (["0", "1", "2", "3"], {
+                    "default": "3",
+                    "tooltip": "Maximum number of images to process. Images are processed in order: image1, image2, image3"
+                }),
             },
             "optional": {
                 "vae": ("VAE",),
@@ -32,7 +36,10 @@ class TextEncodeEditAdvanced:
     FUNCTION = "encode"
     CATEGORY = "conditioning/qwen_image_edit"
     
-    def encode(self, clip, prompt, vl_megapixels=0.50, vae=None, image1=None, image2=None, image3=None):
+    def encode(self, clip, prompt, vl_megapixels=0.50, max_images_allowed="3", vae=None, image1=None, image2=None, image3=None):
+        # Convert string to int
+        max_images_allowed = int(max_images_allowed)
+        
         ref_latents = []
         images = [image1, image2, image3]
         images_vl = []
@@ -41,7 +48,8 @@ class TextEncodeEditAdvanced:
         
         vl_disabled = vl_megapixels <= 0
         
-        for i, image in enumerate(images):
+        # Only process up to max_images_allowed
+        for i, image in enumerate(images[:max_images_allowed]):
             if image is not None:
                 samples = image.movedim(-1, 1)
                 
@@ -73,7 +81,6 @@ class TextEncodeEditAdvanced:
 NODE_CLASS_MAPPINGS = {
     "TextEncodeEditAdvanced": TextEncodeEditAdvanced,
 }
-
 NODE_DISPLAY_NAME_MAPPINGS = {
     "TextEncodeEditAdvanced": "TextEncodeEditAdvanced",
 }

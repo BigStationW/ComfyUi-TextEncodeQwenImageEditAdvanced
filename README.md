@@ -47,3 +47,12 @@ Restart ComfyUI after installation.
 Find the **TextEncodeEditAdvanced** node.
 
 I also provide [worksflows](https://github.com/BigStationW/ComfyUi-TextEncodeEditAdvanced/tree/main/workflow) for those interested.
+
+
+## Conditioning Add Image Reference
+
+A variant of ```TextEncodeEditAdvanced``` that let's you use ```CLIP Text Encode (Prompt)``` [(Or something else)](https://github.com/asagi4/comfyui-prompt-control)
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/baad54c8-8a6d-4efe-b783-8c627687f655" />
+
+A workflow using this node for [Flux 2 Klein](https://github.com/BigStationW/ComfyUi-TextEncodeEditAdvanced/blob/main/workflow/workflow_Flux2_Klein_9b_clip_text_encode.json) is provided.

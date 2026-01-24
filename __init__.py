@@ -1,8 +1,49 @@
 import math
 import torch
 import comfy.utils
-from comfy_extras import nodes_custom_sampler
 from nodes import node_helpers
+
+class ConditioningAddImageReference:
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "conditioning": ("CONDITIONING",),
+                "max_images_allowed": (["0", "1", "2", "3"], {
+                    "default": "3",
+                    "tooltip": "Maximum number of images to process. Images are processed in order: image1, image2, image3"
+                }),
+            },
+            "optional": {
+                "vae": ("VAE",),
+                "image1": ("IMAGE",),
+                "image2": ("IMAGE",),
+                "image3": ("IMAGE",),
+            }
+        }
+    
+    RETURN_TYPES = ("CONDITIONING",)
+    FUNCTION = "add_references"
+    CATEGORY = "conditioning/qwen_image_edit"
+    
+    def add_references(self, conditioning, max_images_allowed="3", vae=None, image1=None, image2=None, image3=None):
+        # Convert string to int
+        max_images_allowed = int(max_images_allowed)
+        
+        ref_latents = []
+        images = [image1, image2, image3]
+        
+        # Only process up to max_images_allowed
+        for i, image in enumerate(images[:max_images_allowed]):
+            if image is not None and vae is not None:
+                samples = image.movedim(-1, 1)
+                ref_latents.append(vae.encode(samples.movedim(1, -1)[:, :, :, :3]))
+        
+        if len(ref_latents) > 0:
+            conditioning = node_helpers.conditioning_set_values(conditioning, {"reference_latents": ref_latents}, append=True)
+        
+        return (conditioning,)
+
 
 class TextEncodeEditAdvanced:
     @classmethod
@@ -69,7 +110,7 @@ class TextEncodeEditAdvanced:
         tokens = clip.tokenize(
             image_prompt + prompt,
             images=images_vl if not vl_disabled and len(images_vl) > 0 else None,
-            llama_template=llama_template if not vl_disabled else None  # Only use template when VL is enabled
+            llama_template=llama_template if not vl_disabled else None
         )
         conditioning = clip.encode_from_tokens_scheduled(tokens)
         
@@ -78,9 +119,13 @@ class TextEncodeEditAdvanced:
         
         return (conditioning,)
 
+
 NODE_CLASS_MAPPINGS = {
     "TextEncodeEditAdvanced": TextEncodeEditAdvanced,
+    "ConditioningAddImageReference": ConditioningAddImageReference,
 }
+
 NODE_DISPLAY_NAME_MAPPINGS = {
     "TextEncodeEditAdvanced": "TextEncodeEditAdvanced",
+    "ConditioningAddImageReference": "Conditioning Add Image Reference",
 }

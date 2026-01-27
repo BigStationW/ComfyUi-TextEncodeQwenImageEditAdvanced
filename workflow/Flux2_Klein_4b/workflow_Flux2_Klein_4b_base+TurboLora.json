@@ -1038,29 +1038,6 @@
       "bgcolor": "rgba(24,24,27,.9)"
     },
     {
-      "id": 168,
-      "type": "Note",
-      "pos": [
-        143.09032456978105,
-        321.1661137986596
-      ],
-      "size": [
-        309.424717968094,
-        118.13928224766755
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "https://civitai.com/models/2324315/klein-4b9b-base-to-turbo-lora?modelVersionId=2617121"
-      ],
-      "color": "#c09430",
-      "bgcolor": "rgba(24,24,27,.9)"
-    },
-    {
       "id": 150,
       "type": "CLIPLoader",
       "pos": [
@@ -1072,7 +1049,7 @@
         117.71280000000002
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1148,7 +1125,7 @@
         82
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1176,6 +1153,29 @@
         "Flux Klein\\flux-2-klein-base-4b.safetensors.safetensors",
         "default"
       ]
+    },
+    {
+      "id": 168,
+      "type": "Note",
+      "pos": [
+        143.09032456978105,
+        321.1661137986596
+      ],
+      "size": [
+        309.424717968094,
+        118.13928224766755
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "https://civitai.com/models/2324315?modelVersionId=2614707"
+      ],
+      "color": "#c09430",
+      "bgcolor": "rgba(24,24,27,.9)"
     }
   ],
   "links": [
@@ -1440,10 +1440,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3186308177103588,
+      "scale": 0.6830134553650705,
       "offset": [
-        1513.9305705496986,
-        96.76716926693454
+        681.1383058396095,
+        13.985854407998204
       ]
     },
     "frontendVersion": "1.37.11",

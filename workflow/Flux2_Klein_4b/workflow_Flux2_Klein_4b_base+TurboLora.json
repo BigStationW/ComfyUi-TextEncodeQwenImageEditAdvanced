@@ -1114,6 +1114,29 @@
       ]
     },
     {
+      "id": 168,
+      "type": "Note",
+      "pos": [
+        143.09032456978105,
+        321.1661137986596
+      ],
+      "size": [
+        309.424717968094,
+        118.13928224766755
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "https://civitai.com/models/2324315?modelVersionId=2614707"
+      ],
+      "color": "#c09430",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
       "id": 103,
       "type": "UNETLoader",
       "pos": [
@@ -1125,7 +1148,7 @@
         82
       ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1150,32 +1173,9 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        "Flux Klein\\flux-2-klein-base-4b.safetensors.safetensors",
+        "Flux Klein\\flux-2-klein-base-4b.safetensors",
         "default"
       ]
-    },
-    {
-      "id": 168,
-      "type": "Note",
-      "pos": [
-        143.09032456978105,
-        321.1661137986596
-      ],
-      "size": [
-        309.424717968094,
-        118.13928224766755
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "https://civitai.com/models/2324315?modelVersionId=2614707"
-      ],
-      "color": "#c09430",
-      "bgcolor": "rgba(24,24,27,.9)"
     }
   ],
   "links": [
@@ -1440,10 +1440,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6830134553650705,
+      "scale": 0.38554328942953164,
       "offset": [
-        681.1383058396095,
-        13.985854407998204
+        1151.9727608305097,
+        249.41591099499828
       ]
     },
     "frontendVersion": "1.37.11",
